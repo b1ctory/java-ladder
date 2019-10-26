@@ -5,6 +5,7 @@
   * 1차 : 11월 02일
   * 2차 : 11월 09일
   * 3차 : 11월 16일
+  * 4차 : 11월 23
   
 * [미션 시작하기](https://github.com/backlo-study-programing/study-docs/blob/master/%EB%AF%B8%EC%85%98%20%EC%8B%9C%EC%9E%91.md)
  
