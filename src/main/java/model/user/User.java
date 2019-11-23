@@ -16,6 +16,9 @@ public class User {
         if (name.length() > MAX_NAME_LENGTH) {
             throw new IllegalArgumentException("이름은 다섯글자 이하로 입력해주세요.");
         }
+        if (name.equals("all")) {
+            throw new IllegalArgumentException("all 이라는 이름은 사용할 수 없습니다.");
+        }
     }
 
     @Override

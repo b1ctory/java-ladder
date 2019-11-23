@@ -1,6 +1,7 @@
 package model.user;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,6 +12,7 @@ public class UserGroup {
 
     public UserGroup(List<String> names) {
         checkMinUsers(names);
+        checkDupUsers(names);
         this.users = new ArrayList<>();
         names.stream()
                 .map(name -> users.add(new User(name)))
@@ -21,6 +23,16 @@ public class UserGroup {
         if (users.size() < MIN_USER_NUMBER) {
             throw new IllegalArgumentException("참가자가 두 명 이상이어야 합니다.");
         }
+    }
+
+    private void checkDupUsers(List<String> users) {
+        if (users.size() != new HashSet<>(users).size()) {
+            throw new IllegalArgumentException("참가자 이름은 중복될 수 없습니다.");
+        }
+    }
+
+    public User getNthUser(int index) {
+        return users.get(index);
     }
 
     public List<User> getUserList() {
