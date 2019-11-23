@@ -12,9 +12,9 @@ import java.util.List;
 public class OutputView {
     private static final int NAME_CONTAINER = 6;
 
-    public static void printLadderResult(Ladder ladder, UserGroup participantGroup, RewardGroup rewardGroup) {
+    public static void printLadderResult(Ladder ladder, UserGroup userGroup, RewardGroup rewardGroup) {
         System.out.println("\n사다리 결과\n");
-        printName(participantGroup);
+        printName(userGroup);
         drawLadder(ladder);
         printRewards(rewardGroup);
         System.out.println();
