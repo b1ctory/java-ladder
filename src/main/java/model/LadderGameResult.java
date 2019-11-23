@@ -38,7 +38,7 @@ public class LadderGameResult {
         return gameResult;
     }
 
-    private List<String> checkInput(final List<String> names) {
+    private List<String> checkInput(List<String> names) {
         if (names.size() == END_COMMAND_LENGTH && names.get(END_COMMAND_NUM).equals(END_COMMAND)) {
             isEnd = true;
             return gameResult.keySet().stream()
